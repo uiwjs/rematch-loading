@@ -1,0 +1,36 @@
+{
+  "name": "@uiw/rematch-loading",
+  "version": "1.1.3",
+  "description": "Loading indicator plugin for Rematch.",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:types && npm run build:types -- --outDir lib/cjs",
+    "build:ts": "tsbb build --target react",
+    "build:types": "tsbb types --outDir lib/esm --target ESNEXT"
+  },
+  "keywords": [
+    "@rematch",
+    "loading",
+    "plugin",
+    "redux",
+    "rematch"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@rematch/core": ">=1.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.2"
+  },
+  "devDependencies": {
+    "@rematch/core": "^1.0.0",
+    "tsbb": "^1.1.3"
+  }
+}
