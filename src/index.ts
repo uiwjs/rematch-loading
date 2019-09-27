@@ -1,4 +1,4 @@
-import { Model, Plugin } from '@rematch/core';
+import { Action, Model, Models, Plugin } from '@rematch/core';
 
 export interface LoadingConfig {
   name?: string
@@ -72,7 +72,7 @@ const validateConfig = (config: LoadingConfig) => {
   }
 }
 
-export default (config: LoadingConfig = {}): Plugin => {
+export default (config: LoadingConfig = {}): Plugin<Models, Action<any, any>> => {
   validateConfig(config)
 
   const loadingModelName = config.name || 'loading'
